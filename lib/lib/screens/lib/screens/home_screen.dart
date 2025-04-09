@@ -11,31 +11,38 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Balance: \$5', style: TextStyle(fontSize: 24)),
+            const Text('Balance: \$5', style: TextStyle(fontSize: 24)),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {}, // will go to slot machine
+              onPressed: () {
+                Navigator.pushNamed(context, '/slot');
+              },
               child: const Text('Play Slot Machine'),
             ),
             ElevatedButton(
-              onPressed: () {}, // will go to dice
+              onPressed: () {
+                Navigator.pushNamed(context, '/dice');
+              },
               child: const Text('Play Dice'),
             ),
             ElevatedButton(
-              onPressed: () {}, // will go to wheel
+              onPressed: () {
+                Navigator.pushNamed(context, '/wheel');
+              },
               child: const Text('Spin Wheel'),
             ),
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {}, // will go to deposit
-              child: const Text('Deposit'),
+              onPressed: () {},
+              child: const Text('Deposit (Coming Soon)'),
             ),
             ElevatedButton(
-              onPressed: () {}, // will go to withdraw
-              child: const Text('Withdraw'),
+              onPressed: () {},
+              child: const Text('Withdraw (Coming Soon)'),
             ),
             ElevatedButton(
-              onPressed: () {}, // will go to referral
-              child: const Text('Referral'),
+              onPressed: () {},
+              child: const Text('Referral (Coming Soon)'),
             ),
           ],
         ),
